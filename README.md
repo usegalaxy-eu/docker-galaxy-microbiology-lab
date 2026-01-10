@@ -1,5 +1,4 @@
 [![DOI](https://zenodo.org/badge/46994376.svg)](https://zenodo.org/badge/latestdoi/46994376)
-[![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-ngs-preprocessing/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-ngs-preprocessing)
 [![Gitter](https://badges.gitter.im/bgruening/docker-galaxy-stable.svg)](https://gitter.im/bgruening/docker-galaxy-stable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Galaxy Workbench for NGS-preprocessing
@@ -18,29 +17,29 @@ Galaxy Workbench for NGS-preprocessing
 # Requirements
 
  - [Docker](https://docs.docker.com/installation/) for Linux / Windows / OSX
- - [Kitematic](https://kitematic.com/) for Windows / OS-X (Optional)
 
 # Usage
 
 To launch:
 
 ```
-docker run -i -t --privileged -p 8080:80 quay.io/bgruening/galaxy-ngs-preprocessing
+docker run --rm -i -t --privileged -p 8080:80 quay.io/bgruening/galaxy-ngs-preprocessing
 ```
 
+For persistent data storage:
+
+```
+docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.ngs/:/export quay.io/bgruening/galaxy-ngs-preprocessing
+```
+
+
 For more details about this command line or specific usage, please consult the
-[`README`](https://github.com/bgruening/docker-galaxy-stable/blob/master/README.md) of the main Galaxy Docker image, on which the current image is based.
+[`README`](https://github.com/bgruening/docker-galaxy/blob/master/README.md) of the main Galaxy Docker image, on which the current image is based.
 
 # Contributers
 
  - Bjoern Gruening
  - Bérénice Batut
-
-
-# History
-
- - 0.1: Initial release!
-
 
 # Support & Bug Reports
 
