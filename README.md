@@ -1,4 +1,3 @@
-[![DOI](https://zenodo.org/badge/46994376.svg)](https://zenodo.org/badge/latestdoi/46994376)
 [![Gitter](https://badges.gitter.im/bgruening/docker-galaxy-stable.svg)](https://gitter.im/bgruening/docker-galaxy-stable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Microbiology Lab Docker Image
@@ -29,19 +28,19 @@ docker build -t galaxy:microbiology .
 To launch:
 
 ```
-docker run --rm -i -t --privileged -p 8080:80 quay.io/bgruening/galaxy-ngs-preprocessing
+docker run --rm -i -t --privileged -p 8080:80 galaxy:microbiology
 ```
 
 For persistent data storage:
 
 ```
-docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.microbiology/:/export quay.io/bgruening/galaxy-ngs-preprocessing
+docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.microbiology/:/export galaxy:microbiology
 ```
 
 With IT enabled:
 
 ```
-docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged -v /home/user/galaxy_storage/:/export/ 
+docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged -v /home/user/galaxy_storage/:/export/ galaxy:microbiology
 ```
 
 The Galaxy Admin User has the username ``admin`` and the password ``password``.
