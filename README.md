@@ -58,4 +58,4 @@ For more details about this command line or specific usage, please consult the
 
 # Bug Reports
 
-You can file an [github issue](https://github.com/bgruening/docker-galaxy-ngs-preprocessing/issues) or ask us on the [Galaxy development list](http://lists.bx.psu.edu/listinfo/galaxy-dev).
+You can file an [github issue](https://github.com/paulzierep/docker-galaxy-microbiology-lab/issues) or ask us on the [Galaxy development list](http://lists.bx.psu.edu/listinfo/galaxy-dev).

@@ -13,7 +13,7 @@ site_name: Europe
 nationality: European
 
 # Used for rendering tool/workflow links. Trailing '/' will be removed.
-galaxy_base_url: http://127.0.0.1
+galaxy_base_url: http://127.0.0.1:8080/ #this should be set to whereever the lab ist hosted
 subdomain: microbiology
 root_domain: usegalaxy.eu
 support_url: https://help.galaxyproject.org/
