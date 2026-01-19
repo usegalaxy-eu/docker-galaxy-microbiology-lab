@@ -5,12 +5,6 @@ Microbiology Lab Docker Image
 
 Galaxy Docker repository for the Microbiology Lab
 
-# Adaptations
-
-* lab page rendering in 127.0.0.1
-* custom welcome page
-* tools from the lab [todo]
-
 # Installed tools
 
 # Requirements
@@ -59,3 +53,11 @@ For more details about this command line or specific usage, please consult the
 # Bug Reports
 
 You can file an [github issue](https://github.com/paulzierep/docker-galaxy-microbiology-lab/issues) or ask us on the [Galaxy development list](http://lists.bx.psu.edu/listinfo/galaxy-dev).
+
+# Technical Explanaition
+
+# Adaptations from main galaxy docker
+
+* Lab page copied from https://github.com/galaxyproject/galaxy_codex/tree/main/communities/microgalaxy/lab rendering with tools pointing to 127.0.0.1:8080
+* Custom welcome page pointing to lab/usegalaxy.local.yml
+* Tools from the lab [todo]
