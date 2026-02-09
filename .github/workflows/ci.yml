@@ -36,6 +36,7 @@ jobs:
           tags: ci-${{ github.sha }}
           base-image: ${{ env.GALAXY_BASE_IMAGE }}
           push: false
+          tool-file:
 
   release:
     if: github.event_name == 'release'
