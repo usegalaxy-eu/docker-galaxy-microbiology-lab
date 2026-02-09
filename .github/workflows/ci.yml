@@ -17,9 +17,8 @@ on:
 
 env:
   IMAGE_REGISTRY: quay.io
-  IMAGE_REPOSITORY: bgruening/galaxy-ngs-preprocessing
+  IMAGE_REPOSITORY: bgruening/docker-galaxy-microbiology-lab
   GALAXY_BASE_IMAGE: quay.io/bgruening/galaxy:25.1.1
-  TOOL_FILE: ngs_preprocessing.yml
 
 jobs:
   build:
@@ -35,7 +34,6 @@ jobs:
           registry: ${{ env.IMAGE_REGISTRY }}
           repository: ${{ env.IMAGE_REPOSITORY }}
           tags: ci-${{ github.sha }}
-          tool-file: ${{ env.TOOL_FILE }}
           base-image: ${{ env.GALAXY_BASE_IMAGE }}
           push: false
 
@@ -54,7 +52,6 @@ jobs:
           registry: ${{ env.IMAGE_REGISTRY }}
           repository: ${{ env.IMAGE_REPOSITORY }}
           push: true
-          tool-file: ${{ env.TOOL_FILE }}
           base-image: ${{ env.GALAXY_BASE_IMAGE }}
           username: '$oauthtoken'
           password: ${{ secrets.QUAY_OAUTH_TOKEN }}
