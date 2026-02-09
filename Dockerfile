@@ -5,7 +5,7 @@ FROM ${BASE_IMAGE}
 
 LABEL maintainer="Björn A. Grüning <bjoern.gruening@gmail.com>"
 
-ENV GALAXY_CONFIG_BRAND Microbiology
+ENV GALAXY_CONFIG_BRAND=Microbiology
 
 COPY --chown=$GALAXY_USER:$GALAXY_USER \
      static/welcome.html \
