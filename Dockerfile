@@ -3,7 +3,7 @@
 ARG BASE_IMAGE=quay.io/bgruening/galaxy:25.1.1
 FROM ${BASE_IMAGE}
 
-LABEL maintainer="Björn A. Grüning <bjoern.gruening@gmail.com>"
+LABEL maintainer="Paul Zierep <paul.zierep@gmail.com>"
 
 ENV GALAXY_CONFIG_BRAND=Microbiology
 
