@@ -59,12 +59,6 @@ tools:
 - name: argnorm
   owner: iuc
   tool_panel_section_id: ''
-- name: artic_guppyplex
-  owner: iuc
-  tool_panel_section_id: ''
-- name: artic_minion
-  owner: iuc
-  tool_panel_section_id: ''
 - name: assembly_stats
   owner: iuc
   tool_panel_section_id: ''
