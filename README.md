@@ -3,6 +3,8 @@ Microbiology Lab (MGL) Docker Image
 
 Galaxy Docker repository for the Microbiology Lab
 
+![MGL interface](https://github.com/usegalaxy-eu/microbiology_galaxy_lab_paper_2025/blob/main/docs/figures/figure_1.png)
+
 # TL;DR
 
 ## Requirements
@@ -26,13 +28,13 @@ docker run --rm -i -t --privileged -p 8080:80 quay.io/galaxy/docker-galaxy-micro
 ## Persistent data storage
 
 ```bash
-docker run --rm -i -t --privileged -p 8080:80 -v ~/export.microbiology/:/export galaxy:microbiology
+docker run --rm -i -t --privileged -p 8080:80 -v ~/export.microbiology/:/export quay.io/galaxy/docker-galaxy-microbiology-lab
 ```
 
 ## With IT enabled
 
 ```bash
-docker run -p 8080:80 -p 8021:21 -p 4002:4002 --privileged -v ~/export.microbiology/:/export/ galaxy:microbiology
+docker run -p 8080:80 -p 8021:21 -p 4002:4002 --privileged -v ~/export.microbiology/:/export/ quay.io/galaxy/docker-galaxy-microbiology-lab
 ```
 
 You can customize the MGL by installing tools and databases via the admin view.
@@ -100,6 +102,16 @@ sed -i \
   -e 's/^install_resolver_dependencies: true$/install_resolver_dependencies: false/' \
   -e 's/^install_tool_dependencies: true$/install_tool_dependencies: false/' \
   Local_Galaxy.yaml
+
+# remove artic_guppyplex artic_minion since it has doublicated data table which kills Galaxy start up
+awk '
+  /^- name:/ {
+    name = $3
+    skip = (name == "artic_guppyplex" || name == "artic_minion")
+  }
+  !skip
+' local_tools.yml > tools.filtered.yml
+mv tools.filtered.yml local_tools.yml
 ```
 
 ## To build
