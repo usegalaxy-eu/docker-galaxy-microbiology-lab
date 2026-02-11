@@ -12,8 +12,8 @@ COPY --chown=$GALAXY_USER:$GALAXY_USER \
      $GALAXY_CONFIG_DIR/web
 
 ## Install tools
-ARG TOOL_FILE=bin/local_tools.yml
-#ARG TOOL_FILE=local_tools_minimal.yml
+#ARG TOOL_FILE=bin/local_tools.yml
+ARG TOOL_FILE=bin/local_tools_minimal.yml
 COPY ${TOOL_FILE} $GALAXY_ROOT_DIR/tools.yaml
 
 RUN install-tools $GALAXY_ROOT_DIR/tools.yaml
