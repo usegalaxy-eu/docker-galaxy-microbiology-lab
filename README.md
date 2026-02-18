@@ -3,10 +3,10 @@ Microbiology Lab (MGL) Docker Image
 
 Galaxy Docker repository for the Microbiology Lab
 
-<div style="text-align: center;">
-  <img src="https://github.com/usegalaxy-eu/microbiology_galaxy_lab_paper_2025/blob/main/docs/figures/graphical_abstract.png"
+<div align="center">
+  <img src="https://raw.githubusercontent.com/usegalaxy-eu/microbiology_galaxy_lab_paper_2025/main/docs/figures/graphical_abstract.png"
        alt="MGL interface"
-       style="width: 50%;">
+       width="60%">
 </div>
 
 # TL;DR
