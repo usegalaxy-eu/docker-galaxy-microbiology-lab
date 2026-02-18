@@ -42,9 +42,11 @@ docker run -p 8080:80 -p 8021:21 -p 4002:4002 --privileged -v ~/export.microbiol
 
 # Customize the MGL
 
-You can customize the MGL by installing tools and databases via the admin view.
-The Galaxy Admin User has the username ``admin`` and the password ``password``.
-Make sure to run the docker container with persistent data storage to keep your changes.
+You can customize the MGL by installing tools via the admin view.
+The Galaxy admin user has the username ``admin`` and the password ``password``.
+The MGL relies on CVMFS for reference data (similar to usegalaxy.org), so new DBs need to be stored in CVMFS
+to make them accessible (add an [issue to IDC](https://github.com/galaxyproject/idc/issues) to get them installed). 
+Make sure to run the docker container with persistent data storage to keep your changes!
 
 # Support
 
@@ -76,13 +78,13 @@ It can be changed on runtime using `-e LAB_DOMAIN=http://other.domain.com`.
 ### Tools
 
 The docker MGL installs all tools from: https://github.com/galaxyproject/galaxy_codex/blob/main/communities/microgalaxy/lab/tools/all/Local_Galaxy.yaml
-But the locally installed tools do not include the dependencies to keep to image small.
+But the locally installed tools do not include the dependencies to keep the image small.
 On first tool run, a singularity container of the tool will be installed.
 
-### CVFMS
+### CVMFS
 
-The image contains the full CVFMS reference data. But not locally, since these are multiple TBs.
-So like tools, the reference data will be downloaded on the first execution.
+The image contains the full CVMFS reference data. But not locally, since these are multiple TBs.
+Like tools, the reference data will be downloaded on the first execution.
 
 # Update the container
 
