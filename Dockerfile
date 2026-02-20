@@ -1,6 +1,6 @@
 # Galaxy - Microbiology Lab
 
-ARG BASE_IMAGE=quay.io/bgruening/galaxy:25.1.1
+ARG BASE_IMAGE=quay.io/bgruening/galaxy:26.0-rc1
 FROM ${BASE_IMAGE}
 
 LABEL maintainer="Paul Zierep <paul.zierep@gmail.com>"
