@@ -24,6 +24,8 @@ ENV GALAXY_CONFIG_tool_data_table_config_path=/cvmfs/data.galaxyproject.org/mana
 #default is localhost, set -e to any domain needed
 ENV LAB_DOMAIN=http://127.0.0.1:8080
 
+ENV GALAXY_SINGULARITY_VOLUMES=\$defaults,/cvmfs:/cvmfs
+
 # Patch script to change lab domain on startup via $LAB_DOMAIN
 # can now be set by using -e LAB_DOMAIN=http://127.0.0.1:8080
 COPY bin/patch-wrapper.sh /usr/local/bin/patch-wrapper.sh
